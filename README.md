@@ -94,17 +94,17 @@ In this example, we define the git repository location
 ```js
 grunt.initConfig({
   githash: {
-    main: {
+    submodule: {
       options: {
-        // Git repository path:
-        dir: 'builds'
+        // Git repository path (e.g. a git sub module)
+        dir: 'sub/repository/'
       }
     }
   },
 
   anotherTask: {
     options: {
-      someProp: '<%= githash.main.hash %>'
+      someProp: '<%= githash.submodule.hash %>'
     }
   }
 })
