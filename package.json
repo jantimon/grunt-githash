@@ -1,0 +1,36 @@
+{
+  "name": "grunt-githash",
+  "version": "0.1.0",
+  "description": "Grunt plugin to get the current githash",
+  "homepage": "https://github.com/jantimon/grunt-githash",
+  "repository": "https://github.com/jantimon/grunt-githash.git",
+  "author": {
+    "name": "Jan Nicklas",
+    "email": "j.nicklas@me.com",
+    "url": ""
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-nodeunit": "~0.3.0",
+    "grunt-template": "^0.2.3",
+    "jshint-stylish": "~0.1.5",
+    "load-grunt-tasks": "~0.3.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "bluebird": "^2.9.8",
+    "git-rev-2": "^0.1.0"
+  }
+}
