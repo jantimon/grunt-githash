@@ -1,6 +1,6 @@
 # grunt-githash
 
-> Grunt plugin to get the current githash
+> Grunt plugin to get the current git hash, git branch and git tag
 
 ## Getting Started
 This plugin requires Grunt.
@@ -41,13 +41,29 @@ grunt.initConfig({
 Type: `String`
 Default value: `'.'`
 
-The root of the git repository
+### Available values
+
+#### githash.{target}.branch
+Type: `String`
+Value: branch name
+
+#### githash.{target}.tag
+Type: `String`
+Value: tag name
+
+#### githash.{target}.hash
+Type: `String`
+Value: the full hash value
+
+#### githash.{target}.short
+Type: `String`
+Value: the short git hash value
 
 ### Usage Examples
 
 #### Default Options
 
-In this example, the default options are used to get the git values.
+In this example, the default options are used to get the git status.
 
 ```js
 grunt.initConfig({
@@ -57,11 +73,13 @@ grunt.initConfig({
     }
   },
 
-  anotherTask: {
-    options: {
-      someProp: '<%= githash.main.hash %>'
-    }
-  }
+   anotherTask: {
+     options: {
+       exampleOptions1: '<%= githash.main.hash %>',
+       exampleOptions2: '<%= githash.main.hash %> <%= githash.main.tag %> <%= githash.main.branch %>',
+       exampleOptions3: '<%= githash.main.short %>'
+     }
+   }
 })
 ```
 
@@ -90,9 +108,6 @@ grunt.initConfig({
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-## Release History
-_(Nothing yet)_
 
 ## License
 Copyright (c) 2015 Jan Nicklas. Licensed under the MIT license.
