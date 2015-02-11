@@ -1,5 +1,9 @@
 # grunt-githash
 
+[![Build Status](https://travis-ci.org/jantimon/grunt-githash.svg)](https://travis-ci.org/jantimon/grunt-githash)
+[![NPM version](https://badge.fury.io/js/grunt-githash.svg)](http://badge.fury.io/js/grunt-githash)
+[![Dependency Status](https://david-dm.org/jantimon/grunt-githash.png)](https://david-dm.org/jantimon/grunt-githash)
+
 > Grunt plugin to get the current git hash, git branch and git tag
 
 ## Getting Started
