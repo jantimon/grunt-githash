@@ -45,6 +45,11 @@ grunt.initConfig({
 Type: `String`
 Default value: `'.'`
 
+#### options.fail
+Type: `Boolean`
+Default value: `true`
+Reports a warning if not inside a git respository
+
 ### Available values
 
 #### githash.{target}.branch

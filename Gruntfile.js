@@ -35,7 +35,8 @@ module.exports = function (grunt) {
     githash: {
       main: {
         options: {
-          dir: '.'
+          dir: '.',
+          fail: false
         }
       }
     },

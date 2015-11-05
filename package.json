@@ -1,6 +1,6 @@
 {
   "name": "grunt-githash",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Grunt plugin to get the current git hash, branch and tag",
   "homepage": "https://github.com/jantimon/grunt-githash",
   "repository": "https://github.com/jantimon/grunt-githash.git",

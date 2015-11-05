@@ -18,7 +18,10 @@ module.exports = function (grunt) {
 
     var name = 'githash' + (this.target ? '.' + this.target : '');
 
-    var options = this.options();
+    var options = this.options({
+      // Break if not inside a git repository
+      fail: true
+    });
     var dir = path.resolve(options.dir || '.');
     var done = this.async();
 
@@ -34,6 +37,11 @@ module.exports = function (grunt) {
         tag: args[2],
         branch: args[3]
       };
+    }).catch(function(err) {
+      if (options.fail) {
+        grunt.warn ('Could not read git information: ' + err);
+      }
+      return {};
     }).then(function(gitResult){
       grunt.config.set(name + '.hash', gitResult.long);
       grunt.config.set(name + '.short', gitResult.short);
