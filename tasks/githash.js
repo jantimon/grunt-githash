@@ -38,9 +38,10 @@ module.exports = function (grunt) {
         branch: args[3]
       };
     }).catch(function(err) {
-      if (options.fail) {
-        grunt.warn ('Could not read git information: ' + err);
-      }
+      grunt.log.warn('Could not read git information: ' + err);
+			if (options.fail) {
+				throw err;
+			}
       return {};
     }).then(function(gitResult){
       grunt.config.set(name + '.hash', gitResult.long);
